@@ -1,78 +1,85 @@
-# Ex.No:1(D) ARRAYS
+# Ex.No:1(B) CONDITIONAL STATEMENT
 
 ## QUESTION:
-Write a Java program to print all elements in an array that are greater than a given value
+In a haunted house, lights turn on or off based on the hour of entry:
+
+If the hour is even and between 2 and 6 (inclusive), lights flicker.
+
+If the hour is odd and between 7 and 11, lights stay off.
+
+If the hour is 12, lights turn red.
+
+Otherwise, the house is dark.
 
 
 ## AIM:
-To write a Java program that prints all elements in an array greater than a given value.
+To write a Java program that uses conditional statements to determine the state of lights in a haunted house based on the hour of entry.
 
 ## ALGORITHM :
-1. Start the program and create a Scanner object.
-2. Read the size n and elements of the array.
-3. Read a value to compare with.
-4. Use a loop to check and print elements greater than the given value.
-5. End the program.
+1. Start the program.
 
+2. Import the necessary package java.util.*.
 
+3. Create a Scanner object to read the hour input from the user.
 
+4. Read the hour as an integer.
+
+5. Check if the hour is even and between 2 and 6 (inclusive):
+
+6. Display “Lights flicker”.
+
+7. Else if the hour is odd and between 7 and 11:
+
+8. Display “Lights stay off”.
+
+9. Else if the hour is 12:
+
+10. Display “Lights turn red”.
+ 
+11. Display “The house is dark”.
+
+12. End the program.
 
 ## PROGRAM:
- ```
+```
 /*
 Program to implement variables and Operators using Java
-Developed by: PRASANNAR R
-RegisterNumber: 212222040120
+Developed by: Keerthivasan K S
+RegisterNumber: 212224230120
 */
 ```
 
-## SOURCE CODE:
-```
-import java.util.Scanner;
-
-public class ElementsGreaterThanX {
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        int n = scanner.nextInt();   
-        int[] arr = new int[n];
-
-        for(int i = 0; i < n; i++) {
-            arr[i] = scanner.nextInt();  
-        }
-
-        int x = scanner.nextInt();     
-
-        boolean found = false;
-
-        for(int i = 0; i < n; i++) {
-            if(arr[i] > x) {
-                System.out.println(arr[i]);
-                found = true;
-            }
-        }
-
-        if(!found) {
-            System.out.println("No elements greater than " + x);
+## Sourcecode.java:
+```java
+import java.util.*;
+public class Demo
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+       if (a >= 2 && a <= 6 && a % 2 == 0) {
+            System.out.println("Lights flicker");
+        } else if (a>= 7 && a <= 11 && a % 2 != 0) {
+            System.out.println("Lights off");
+        } else if (a == 12) {
+            System.out.println("Lights red");
+        } else {
+            System.out.println("Dark house");
         }
     }
 }
-
 ```
 
-
-
-
-
-
 ## OUTPUT:
-<img width="1141" height="823" alt="image" src="https://github.com/user-attachments/assets/34a186f8-3e64-4b59-a0c6-c0fd2da49e52" />
+<img width="486" height="294" alt="Screenshot 2025-11-14 101547" src="https://github.com/user-attachments/assets/a64529b4-061c-436d-8ea4-55157b6e41b9" />
+
+
 
 
 
 ## RESULT:
-The program successfully prints all array elements greater than the given value.
+Thus, the Java program to implement conditional statements for the haunted house lighting system was successfully executed.
 
 
 
