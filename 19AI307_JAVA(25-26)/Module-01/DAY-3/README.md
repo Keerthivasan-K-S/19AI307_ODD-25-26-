@@ -25,14 +25,14 @@ To write a Java program using looping statements to print a right-angled triangl
  ```
 /*
 Program to implement variables and Operators using Java
-Developed by: PRASANNAR R
-RegisterNumber: 212222040120
+Developed by: Keerthivasan K S
+RegisterNumber: 212224230120
 */
 ```
 
 ## SOURCE CODE:
 
-```
+```java
 import java.util.*;
 public class TrianglePattern
 {
