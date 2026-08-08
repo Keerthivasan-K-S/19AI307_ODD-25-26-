@@ -1,24 +1,20 @@
-# Ex.No:1(C) LOOPING STATEMENT
+# Ex.No:1(D) ARRAYS
 
 ## QUESTION:
-Construct a right-angled triangle star pattern using for loop.
+Write a Java program to print all elements in an array that are greater than a given value
+
+
 ## AIM:
-To write a Java program using looping statements to print a right-angled triangle star pattern based on user input.
+To write a Java program that prints all elements in an array greater than a given value.
 
 ## ALGORITHM :
-1.	Start the program.
+1. Start the program and create a Scanner object.
+2. Read the size n and elements of the array.
+3. Read a value to compare with.
+4. Use a loop to check and print elements greater than the given value.
+5. End the program.
 
-2.	Import the necessary package 'java.util'
 
-3. Read the number of rows from the user.
-
-4. Use an outer loop to iterate through each row.
-
-5. Use an inner loop to print stars (*) for each row.
-
-6. Move to the next line after printing stars for each row.
-
-7. End the program.
 
 
 ## PROGRAM:
@@ -31,36 +27,52 @@ RegisterNumber: 212222040120
 ```
 
 ## SOURCE CODE:
-
 ```
-import java.util.*;
-public class TrianglePattern
-{
-    public static void main(String args[])
-    {
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        for (int i = 1; i <= n; i++) 
-        {         
-            for (int j = 1; j <= i; j++) 
-            {      
-                System.out.print("* ");
+import java.util.Scanner;
+
+public class ElementsGreaterThanX {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();   
+        int[] arr = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();  
+        }
+
+        int x = scanner.nextInt();     
+
+        boolean found = false;
+
+        for(int i = 0; i < n; i++) {
+            if(arr[i] > x) {
+                System.out.println(arr[i]);
+                found = true;
             }
-            System.out.println();              
+        }
+
+        if(!found) {
+            System.out.println("No elements greater than " + x);
         }
     }
 }
+
 ```
 
 
+
+
+
+
 ## OUTPUT:
-<img width="399" height="395" alt="image" src="https://github.com/user-attachments/assets/07286d0c-5174-4702-8d58-34b630bd23d6" />
+<img width="1141" height="823" alt="image" src="https://github.com/user-attachments/assets/34a186f8-3e64-4b59-a0c6-c0fd2da49e52" />
 
 
 
 ## RESULT:
-Thus, the Java program using looping statements to print a right-angled triangle star pattern was successfully written, executed, and verified.
-
+The program successfully prints all array elements greater than the given value.
 
 
 
